@@ -1,0 +1,43 @@
+<div>
+    <h5>{{todaysDate | date : 'short'}}</h5>
+</div>
+
+<div class="row">
+
+    <div class="col-md-6">
+        <label for="name" class="font-weight-bold">Name</label>
+        <input type='text' id='name' class="form-control" [(ngModel)]='swapiSurvey.name' />
+    </div>
+
+    <div class="col-md-6">
+        <label for="swapis" class="font-weight-bold">Fav Swapi</label>
+        <select id="swapis" class='form-control' [(ngModel)]='swapiSurvey.favSwapi' >
+            <option value=""></option>
+            <option [value]="swapi.name" *ngFor='let swapi of people'>{{swapi.name}}</option>
+        </select>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <label for="loveSwapi" class="font-weight-bold">Do you love SWAPI?</label>
+        <select id="loveSwapi" class='form-control'>
+            <option value="true">{{true | yesNo }}</option>
+            <option value="false">{{false | yesNo }}</option>
+        </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <label for="comments" class="font-weight-bold">Comments</label>
+        <textarea id="comments" class="form-control" [(ngModel)]='swapiSurvey.comments'></textarea>
+    </div>
+</div>
+
+<div class="row mt-2">
+    <div class="col-md-12">
+        <button [routerLink]="['submitted']" class="btn btn-outline-success btn-block" (click)='sendForm()' >Send Form</button>
+    </div>
+</div>
