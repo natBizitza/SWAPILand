@@ -13,13 +13,15 @@ import { YesNoPipe } from './yes-no.pipe';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MoviePageComponent } from './movie-page/movie-page.component';
 import { MoviesService } from './movies.service';
+import { MovieDetailsComponent } from './movie-details/movie-details.component';
 
 const routes = [
   {path: '', component: SwapiItemComponent},
   {path: 'submitted', component: FormSubmittedComponent},
   {path: 'movies', component: MoviePageComponent},
   {path: 'people', component: FormSubmittedComponent},
-  {path: 'planets', component: FormSubmittedComponent}
+  {path: 'planets', component: FormSubmittedComponent},
+  {path: 'movies/movie-details', component: MovieDetailsComponent}
 ];
 
 @NgModule({
@@ -29,7 +31,8 @@ const routes = [
     FormSubmittedComponent,
     YesNoPipe,
     NavBarComponent,
-    MoviePageComponent
+    MoviePageComponent,
+    MovieDetailsComponent
   ],
   imports: [
     BrowserModule,
