@@ -7,11 +7,13 @@ import { Location } from '@angular/common';
   styleUrls: ['./movie-details.component.scss']
 })
 export class MovieDetailsComponent implements OnInit {
+  movieDetails: any;
 
   constructor(private location: Location) { }
 
   ngOnInit(): void {
     console.log(this.location.getState());
+    this.movieDetails = this.location.getState();
   }
 
 }
