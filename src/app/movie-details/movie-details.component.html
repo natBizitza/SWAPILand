@@ -5,8 +5,14 @@
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="card-title">Details</h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <p class="card-text">Director: <span>{{movieDetails.director}}</span></p>
+              <p class="card-text">Producers: <span>{{movieDetails.producer}}</span></p>
+              <p class="card-text">Release date: <span>{{movieDetails.release_date | date : 'shortDate'}}</span></p>
+              <p class="card-text">{{movieDetails.opening_crawl}}</p>
+              <h5 class="card-title">Characters</h5>
+              <div class="col mb-3"  *ngFor='let character of movieDetails.characters'>
+              <!--   <p class="card-text">{{character}}</p> -->
+              </div>
             </div>
           </div>
           <div class="col-md-4">
