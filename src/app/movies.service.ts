@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MoviesService {
 
-  constructor(public http: HttpClient ) { }
+  constructor(public http: HttpClient) { }
 
   getMovies() {
     return this.http.get('https://swapi.dev/api/films/');

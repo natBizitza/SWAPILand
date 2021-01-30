@@ -14,6 +14,7 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { MoviePageComponent } from './movie-page/movie-page.component';
 import { MoviesService } from './movies.service';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { CharactersService } from './characters.service';
 
 const routes = [
   {path: '', component: SwapiItemComponent},
@@ -41,7 +42,7 @@ const routes = [
     FormsModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [SwapiService,MoviesService],
+  providers: [SwapiService, MoviesService, CharactersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
