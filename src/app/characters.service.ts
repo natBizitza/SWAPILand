@@ -8,7 +8,11 @@ export class CharactersService {
 
   constructor(public http: HttpClient) { }
 
-  getCharactersUrl(url:string) {
+  getCharacters() {
+    return this.http.get('https://swapi.dev/api/people/');
+  }
+
+  getCharacterFromUrl(url:string) {
     return this.http.get(url);
   }
 }

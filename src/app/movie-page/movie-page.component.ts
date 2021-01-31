@@ -13,8 +13,6 @@ export class MoviePageComponent implements OnInit {
 
   ngOnInit(): void {
     this.movieService.getMovies().subscribe((data: any) =>
-    this.movies = data.results
-  );
+    this.movies = data.results);
   }
-
 }

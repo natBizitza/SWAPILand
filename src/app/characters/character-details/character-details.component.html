@@ -1,24 +1,20 @@
 <div class="container">
-    <h1 class="text-center">{{movie.title}}</h1>
+    <h1 class="text-center">{{character.name}}</h1>
     <div class="card mb-3" style="max-width: 100vw;">
         <div class="row g-0">
           <div class="col-md-7">
             <div class="card-body">
               <h5 class="card-title">Details</h5>
-              <p class="card-text">Director: <span>{{movie.director}}</span></p>
-              <p class="card-text">Producers: <span>{{movie.producer}}</span></p>
-              <p class="card-text">Release date: <span>{{movie.release_date | date : 'shortDate'}}</span></p>
-              <p class="card-text">{{movie.opening_crawl}}</p>
-              <!--  <h5 class="card-title">Characters</h5> -->
-             <!--  <div class="col mb-3"  *ngFor='let character of characters'>
-                <p class="card-text">{{character.name}}</p>
-              </div> -->
-              
+              <p class="card-text">Height: <span>{{character.height}}</span></p>
+              <p class="card-text">Body weight: <span>{{character.mass}}</span></p>
+              <p class="card-text">Hair colour: <span>{{character.hair_color}}</span></p>
+              <p class="card-text">Skin colour: <span>{{character.skin_color}}</span></p>
+              <p class="card-text">Eye colour: <span>{{character.eye_color}}</span></p>
+              <p class="card-text">Birth year: <span>{{character.birth_year}}</span></p>
+              <p class="card-text">Gender: <span>{{character.gender}}</span></p>
+              <p class="card-text">Home: <span>{{character.homeworld}}</span></p>
             </div>
           </div>
-          <!-- <div class="col-md-4">
-            <img src="/assets/robot.svg" alt="..." class="swapi-movie-details">
-          </div> -->
           <div class="col-md-5">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
               <div class="carousel-inner">
@@ -44,17 +40,17 @@
           </div>
       </div>
     </div> 
-    <h5 class="card-title">Characters</h5> 
+    <h5 class="card-title">Movies</h5> 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-6">
-      <div class="col mb-4"  *ngFor='let character of characters'>
+      <div class="col mb-4"  *ngFor='let movie of movies'>
         <div class="card h-100">
           <img src="/assets/movie.svg" class="card-img-top" alt="...">
             <p class="card-text"></p>
-            <a [routerLink]="['../../characters/character-details']" [state]="character" class="btn btn-link">{{character.name}}</a>
+            <a [routerLink]="['../../movies/movie-details']" [state]="movie" class="btn btn-link">{{movie.title}}</a>
           </div>
       </div>
     </div>  
-    <h5 class="card-title">Planets</h5> 
+<!--     <h5 class="card-title">Planets</h5> 
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-6">
       <div class="col mb-4"  *ngFor='let planet of planets'>
         <div class="card h-100">
@@ -63,9 +59,5 @@
             <a [routerLink]="['../../planets/planet-details']" [state]="planet" class="btn btn-link">{{planet.name}}</a>
           </div>
       </div>
-    </div>  
-   <!--  <ul class="list-group list-group-horizontal-md">
-      <li class="list-group-item flex-fill" *ngFor='let character of characters' [routerLink]="['../../characters/character-details']" [state]="character" class="btn btn-link">
-        {{character.name}}</li>
-    </ul> -->
+    </div>   -->
 </div>

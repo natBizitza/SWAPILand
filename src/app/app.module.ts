@@ -15,15 +15,11 @@ import { MoviePageComponent } from './movie-page/movie-page.component';
 import { MoviesService } from './movies.service';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { CharactersService } from './characters.service';
-
-const routes = [
-  {path: '', component: SwapiItemComponent},
-  {path: 'submitted', component: FormSubmittedComponent},
-  {path: 'movies', component: MoviePageComponent},
-  {path: 'people', component: FormSubmittedComponent},
-  {path: 'planets', component: FormSubmittedComponent},
-  {path: 'movies/movie-details', component: MovieDetailsComponent}
-];
+import { CharacterSceneComponent } from './characters/character-scene/character-scene.component';
+import { CharacterDetailsComponent } from './characters/character-details/character-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PlanetSceneComponent } from './planets/planet-scene/planet-scene.component';
+import { PlanetDetailsComponent } from './planets/planet-details/planet-details.component';
 
 @NgModule({
   declarations: [
@@ -33,14 +29,18 @@ const routes = [
     YesNoPipe,
     NavBarComponent,
     MoviePageComponent,
-    MovieDetailsComponent
+    MovieDetailsComponent,
+    CharacterSceneComponent,
+    CharacterDetailsComponent,
+    PageNotFoundComponent,
+    PlanetSceneComponent,
+    PlanetDetailsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule,
-    RouterModule.forRoot(routes)
+    FormsModule
   ],
   providers: [SwapiService, MoviesService, CharactersService],
   bootstrap: [AppComponent]
