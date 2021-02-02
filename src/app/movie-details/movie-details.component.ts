@@ -26,7 +26,6 @@ export class MovieDetailsComponent implements OnInit {
     console.log(this.location.getState());
 
     this.movie = this.location.getState();
-    
     // get films
     if (this.movie){
         this.movie.characters.forEach((element: any) => {

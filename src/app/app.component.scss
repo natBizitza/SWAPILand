@@ -1,0 +1,16 @@
+.p-accordion-header {
+    text-decoration: none;
+
+    .link :hover{
+        text-decoration: none;
+    }
+}
+
+.card-text { 
+    font-weight: bold;
+
+    span {
+        font-weight: normal;
+    }
+
+}

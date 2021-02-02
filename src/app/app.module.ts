@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
-import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +19,10 @@ import { CharacterDetailsComponent } from './characters/character-details/charac
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PlanetSceneComponent } from './planets/planet-scene/planet-scene.component';
 import { PlanetDetailsComponent } from './planets/planet-details/planet-details.component';
+import {AccordionModule} from 'primeng/accordion';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {CardModule} from 'primeng/card';
+
 
 @NgModule({
   declarations: [
@@ -40,7 +43,10 @@ import { PlanetDetailsComponent } from './planets/planet-details/planet-details.
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AccordionModule,
+    BrowserAnimationsModule,
+    CardModule
   ],
   providers: [SwapiService, MoviesService, CharactersService],
   bootstrap: [AppComponent]
