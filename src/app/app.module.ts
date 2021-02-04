@@ -22,6 +22,8 @@ import { PlanetDetailsComponent } from './planets/planet-details/planet-details.
 import {AccordionModule} from 'primeng/accordion';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CardModule} from 'primeng/card';
+import {DialogModule} from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button';
 
 
 @NgModule({
@@ -46,7 +48,9 @@ import {CardModule} from 'primeng/card';
     FormsModule,
     AccordionModule,
     BrowserAnimationsModule,
-    CardModule
+    CardModule,
+    DialogModule,
+    ButtonModule
   ],
   providers: [SwapiService, MoviesService, CharactersService],
   bootstrap: [AppComponent]

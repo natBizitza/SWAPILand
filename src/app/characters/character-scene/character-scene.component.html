@@ -1,5 +1,14 @@
 <div class="container">
     <h1 class="text-center swapi-movie-header">Characters</h1>
+    <p-dialog #cd header="Title" [(visible)]="display" [style]="{width: '50vw'}" [modal]="true" >
+      <ng-template pTemplate="header">
+        Header content here
+      </ng-template>
+      <p-footer>
+        //buttons
+      </p-footer>
+    </p-dialog>
+    <p-button type="button" (click)="showDialog()" icon="pi pi-plus"  label="New character"></p-button>
     <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
       <div class="col mb-4" *ngFor='let character of characters'>
         <div class="card h-100">

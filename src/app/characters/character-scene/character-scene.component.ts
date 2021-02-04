@@ -8,6 +8,8 @@ import { CharactersService } from 'src/app/characters.service';
 })
 export class CharacterSceneComponent implements OnInit {
   characters: any;
+  display: boolean = false;
+
 
   constructor(public characterService: CharactersService) { }
 
@@ -15,5 +17,10 @@ export class CharacterSceneComponent implements OnInit {
     this.characterService.getCharacters().subscribe((data: any) =>
     this.characters = data.results);
   }
+
+
+    showDialog() {
+        this.display = true;
+    }
 
 }
