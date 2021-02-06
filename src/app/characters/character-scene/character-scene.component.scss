@@ -1,4 +1,32 @@
+$small: 375px;
+$medium: 768px;
+
 .p-button {
     background: black;
     border-color: black;
 }
+
+/* .formDialog {
+
+  @media screen and (max-width: $small) {
+    width: 90vw;
+  }
+  @media screen and (min-width: $medium) {
+    width: 50vw;
+  }
+} */
+
+@media (max-width: 768px) {
+  .formDialog{
+    width: 90vw;
+
+  }
+}
+
+/* :host ::ng-deep {
+    .pDialog{
+        width:700px;
+        overflow: visible;
+    }
+}
+ */

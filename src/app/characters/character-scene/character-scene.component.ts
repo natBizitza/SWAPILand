@@ -10,7 +10,6 @@ export class CharacterSceneComponent implements OnInit {
   characters: any;
   display: boolean = false;
 
-
   constructor(public characterService: CharactersService) { }
 
   ngOnInit(): void {
@@ -21,6 +20,9 @@ export class CharacterSceneComponent implements OnInit {
 
     showDialog() {
         this.display = true;
+    }
+
+    cancel() {
     }
 
 }

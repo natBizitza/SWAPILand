@@ -24,6 +24,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {CardModule} from 'primeng/card';
 import {DialogModule} from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
+import { CharacterFormComponent } from './characters/character-form/character-form.component';
 
 
 @NgModule({
@@ -39,7 +40,8 @@ import { ButtonModule } from 'primeng/button';
     CharacterDetailsComponent,
     PageNotFoundComponent,
     PlanetSceneComponent,
-    PlanetDetailsComponent
+    PlanetDetailsComponent,
+    CharacterFormComponent
   ],
   imports: [
     BrowserModule,

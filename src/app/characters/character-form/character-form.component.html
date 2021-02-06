@@ -1,0 +1,53 @@
+<div class="container">
+    <div [hidden]="submitted">
+        <h1>New Character</h1>
+        <form (ngSubmit)="onSubmit()" #characterForm="ngForm">
+            <div class='form-group'>
+                <div class="ui-fluid p-formgrid p-grid">
+                    <div class="p-field p-col-12">
+                        <label for='name'>Name</label>
+                        <input type='text' id='name' class='form-control' #name="ngModel" required [(ngModel)]='model.name' name='name'>
+                        TODO: remove this: {{model.name}}
+                        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                            One need name :/
+                        </div>
+                    </div>
+                    <div class="p-field p-col-12 p-md-6">
+                        <label for='height'>Height</label>
+                        <input type='text' id='height' class='form-control'  [(ngModel)]='model.height' name='height'>
+                    </div>
+                    <div class="p-field p-col-12 p-md-6">
+                        <label for='mass'>Weight</label>
+                        <input type='text' id='mass' class='form-control'  [(ngModel)]='model.mass' name='mass'>
+                    </div>
+                    <div class="p-field p-col-12 p-md-6">
+                        <label for='hairColor'>Hair colour</label>
+                        <input type='text' id='hairColor' class='form-control'  [(ngModel)]='model.hairColor' name='hairColor'>
+                    </div>
+                    <div class="p-field p-col-12 p-md-6">
+                        <label for='eyeColor'>Eye colour</label>
+                        <select class='form-control' id='eyeColor' required [(ngModel)]="model.eyeColor" name="eyeColor">
+                        <option *ngFor='let eyeColor of eyeColors' [value]='eyeColor'>{{eyeColor}}</option>
+                        </select>
+                    </div>
+                    <div class="p-field p-col-12 p-md-6">
+                        <label for='birthYear'>Birth year</label>
+                        <input type='text' id='birthYear' class='form-control'  [(ngModel)]='model.birthYear' name='birthYear'>
+                    </div>
+                    <div class="p-field p-col-12 p-md-6">
+                        <label for='gender'>Gender</label>
+                        <select class='form-control' id='gender'  [(ngModel)]="model.gender" name="gender">
+                            <option *ngFor='let gender of genders' [value]='gender'>{{gender}}</option>
+                        </select>             
+                    </div>
+                    <button type="submit" class="btn btn-success" [disabled]="!characterForm.form.valid">Submit</button>
+                    <button type="button" class="btn btn-default" (click)="newCharacter(); characterForm.reset()">New Character</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div [hidden]="!submitted">
+        <h2>{{ model.name }} is created!!!</h2>
+        <button class="btn btn-primary" (click)="submitted=false">Edit</button>
+    </div>    
+</div>
