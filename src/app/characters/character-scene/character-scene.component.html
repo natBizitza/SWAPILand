@@ -1,22 +1,22 @@
-<div class="container">
-  <div class="p-grid p-justify-center">
-    <h1 class="text-center swapi-movie-header">Characters</h1>
-    <p-dialog #cd [(visible)]="display" styleClass='formDialog' [style]="{width: '50vw'}" [modal]="true" 
+<div class='container'>
+  <div class='p-grid p-justify-center'>
+    <h1 class='text-center swapi-movie-header'>Characters</h1>
+    <p-dialog #cd [(visible)]='display' styleClass='formDialog' [style]="{width: '50vw'}" [modal]='true' 
     [draggable]='false' [resizable]='false' (onHide)="cancel()">
       <app-character-form></app-character-form>
     </p-dialog>
-    <p-button type="button" (click)="showDialog()" icon="pi pi-plus"></p-button>
+    <p-button type='button' (click)='showDialog()' icon='pi pi-plus'></p-button>
   </div>
-    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3">
-      <div class="col mb-4" *ngFor='let character of characters'>
-        <div class="card h-100">
-          <img src="/assets/movie.svg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <h5 class="card-title">{{character.name}}</h5>
-            <p class="card-text">Birth year: <span>{{character.birth_year}}</span></p>
-            <p class="card-text">Height: <span>{{character.height}}</span></p>
-            <p class="card-text">Body weight: <span>{{character.mass}}</span></p>
-            <a [routerLink]="['character-details']" [state]="character" class="btn btn-link">More</a>
+    <div class='row row-cols-1 row-cols-sm-2 row-cols-md-3'>
+      <div class='col mb-4' *ngFor='let character of characters'>
+        <div class='card h-100'>
+          <img src='assets/people/{{characters.indexOf(character)+1}}/1.jpg'class='card-img-top' alt='character-image'>
+          <div class='card-body'>
+            <h5 class='card-title'>{{character.name}}</h5>
+            <p class='card-text'>Birth year: <span>{{character.birth_year}}</span></p>
+            <p class='card-text'>Height: <span>{{character.height}}</span></p>
+            <p class='card-text'>Body weight: <span>{{character.mass}}</span></p>
+            <a [routerLink]="['character-details']" [state]='character' class='btn btn-link'>More</a>
           </div>
         </div>
     </div>  

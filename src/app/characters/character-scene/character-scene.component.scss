@@ -1,5 +1,7 @@
-$small: 375px;
-$medium: 768px;
+$xs: 375px;
+$s: 400px;
+$m: 570px;
+$l: 1000px;
 
 .p-button {
     background: black;
@@ -19,14 +21,29 @@ $medium: 768px;
 @media (max-width: 768px) {
   .formDialog{
     width: 90vw;
-
   }
 }
 
-/* :host ::ng-deep {
-    .pDialog{
-        width:700px;
-        overflow: visible;
-    }
+@media screen and (min-width: $xs) {
+  img {
+    height: 55vh;
+  }
 }
- */
+
+@media screen and (min-width: $s) {
+  img {
+    height: 80vh;
+  }
+}
+
+@media screen and (min-width: $m) {
+  img {
+    height: 35vh;
+  }
+}
+
+@media screen and (min-width: $l) {
+  img {
+    height: 50vh;
+  }
+}

@@ -25,6 +25,7 @@ import {CardModule} from 'primeng/card';
 import {DialogModule} from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { CharacterFormComponent } from './characters/character-form/character-form.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { CharacterFormComponent } from './characters/character-form/character-fo
     PageNotFoundComponent,
     PlanetSceneComponent,
     PlanetDetailsComponent,
-    CharacterFormComponent
+    CharacterFormComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
