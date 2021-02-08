@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PlanetsService } from '../planets.service';
+import { PlanetsService } from '../planet-service/planets.service';
 
 @Component({
   selector: 'app-planet-scene',

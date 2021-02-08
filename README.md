@@ -1,27 +1,33 @@
 # SwapiLand
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.0 using SWAPI (https://swapi.dev/).
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.0 using SWAPI, Star Wars API (https://swapi.dev/).
+The apllication runs and shows the API data, in a responsive manner. 
 
 ## Development server
 
+Before running the app, make sure you have the next dependencies installed:
+
+npm install
+npm install -g @angular/cli
+npm install -g sass
+npm install bootstrap
+npm install primeng 
+npm install primeicons 
+npm install primeflex 
+
 Run `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Next steps
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Implement global search functionality.
+2. Complete pop-up dialog functionality.
+3. Add customized interfaces.
+4. Add paginator.
+5. Unique routes for components (including Ids).
+6. Implement spinners and lazy loading.
+7. Replace all bootstrap styles with primeNg (primeflex).
+8. Improve images (add various image resolutions).
+9. PWA.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## P.S. Don't forget to check ../all-the-answers route! 

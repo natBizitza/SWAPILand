@@ -1,6 +1,5 @@
 <div class="container">
     <div [hidden]="submitted">
-     <!--    <h1>New Character</h1> -->
         <form (ngSubmit)="onSubmit()" #characterForm="ngForm">
             <div class='form-group'>
                 <div class="ui-fluid p-formgrid p-grid">
@@ -41,7 +40,6 @@
                         </select>             
                     </div>
                     <button type="submit" class="btn btn-success" [disabled]="!characterForm.form.valid">Submit</button>
-                    <!-- <button type="button" class="btn btn-default" (click)="newCharacter(); characterForm.reset()">New Character</button> -->
                 </div>
             </div>
         </form>

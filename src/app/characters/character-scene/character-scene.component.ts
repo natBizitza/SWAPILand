@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { CharactersService } from 'src/app/characters.service';
+import { CharactersService } from '../character-service/characters.service';
 
 @Component({
   selector: 'app-character-scene',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Location } from '@angular/common';
-import { CharactersService } from 'src/app/characters.service';
-import { MoviesService } from 'src/app/movies.service';
+import { MoviesService } from 'src/app/movies/movie-service/movies.service';
+import { CharactersService } from 'src/app/characters/character-service/characters.service';
 
 @Component({
   selector: 'app-planet-details',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { CharactersService } from 'src/app/characters.service';
+import { CharactersService } from 'src/app/characters/character-service/characters.service';
 import { Planet } from '../planet';
-import { PlanetsService } from '../planets.service';
+import { PlanetsService } from '../planet-service/planets.service';
 
 @Component({
   selector: 'app-planet-form',

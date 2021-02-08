@@ -4,16 +4,10 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SwapiService } from './swapi.service';
 import { HttpClientModule } from '@angular/common/http';
-import { SwapiItemComponent } from './swapi-item/swapi-item.component';
-import { FormSubmittedComponent } from './form-submitted/form-submitted.component';
-import { YesNoPipe } from './yes-no.pipe';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { MoviePageComponent } from './movie-page/movie-page.component';
-import { MoviesService } from './movies.service';
-import { MovieDetailsComponent } from './movie-details/movie-details.component';
-import { CharactersService } from './characters.service';
+import { MoviePageComponent } from './movies/movie-details/movie-page.component';
+import { MovieDetailsComponent } from './movies/movie-scene/movie-details.component';
 import { CharacterSceneComponent } from './characters/character-scene/character-scene.component';
 import { CharacterDetailsComponent } from './characters/character-details/character-details.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -29,14 +23,13 @@ import { HomeComponent } from './home/home.component';
 import { PlanetFormComponent } from './planets/planet-form/planet-form.component';
 import { MovieFormComponent } from './movies/movie-form/movie-form.component';
 import {GalleriaModule} from 'primeng/galleria';
+import { CharactersService } from './characters/character-service/characters.service';
+import { MoviesService } from './movies/movie-service/movies.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SwapiItemComponent,
-    FormSubmittedComponent,
-    YesNoPipe,
     NavBarComponent,
     MoviePageComponent,
     MovieDetailsComponent,
@@ -62,7 +55,7 @@ import {GalleriaModule} from 'primeng/galleria';
     ButtonModule,
     GalleriaModule
   ],
-  providers: [SwapiService, MoviesService, CharactersService],
+  providers: [MoviesService, CharactersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
