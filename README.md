@@ -7,13 +7,13 @@ The apllication runs and shows the API data in a responsive manner.
 
 Before running the app, make sure you have the next dependencies installed:
 
-npm install
-npm install -g @angular/cli
-npm install -g sass
-npm install bootstrap
-npm install primeng 
-npm install primeicons 
-npm install primeflex 
+- npm install
+- npm install -g @angular/cli
+- npm install -g sass
+- npm install bootstrap
+- npm install primeng 
+- npm install primeicons 
+- npm install primeflex 
 
 Run `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
