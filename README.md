@@ -1,7 +1,7 @@
 # SwapiLand
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.0 using SWAPI, Star Wars API (https://swapi.dev/).
-The apllication runs and shows the API data, in a responsive manner. 
+The apllication runs and shows the API data in a responsive manner. 
 
 ## Development server
 
@@ -28,6 +28,7 @@ Run `ng serve --open` for a dev server. Navigate to `http://localhost:4200/`. Th
 7. Replace all bootstrap styles with primeNg (primeflex).
 8. Improve images (add various image resolutions).
 9. PWA.
+10. Publish on heroku.
 
 
 ## P.S. Don't forget to check ../all-the-answers route! 
