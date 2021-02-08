@@ -12,6 +12,7 @@ export class PlanetDetailsComponent implements OnInit {
   planet: any;
   characters: any[];
   movies: any[];
+  planetId: any;
 
 
   constructor(
@@ -24,7 +25,7 @@ export class PlanetDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.planet = this.location.getState();
-    console.log(this.location.getState());
+    this.planetId = parseInt(this.planet.url[this.planet.url.length-2]);
 
     this.planet.residents.forEach((element: any) => {
       this.characterService.getCharacterFromUrl(element).subscribe((data: any) =>
@@ -34,7 +35,6 @@ export class PlanetDetailsComponent implements OnInit {
     this.planet.films.forEach((element: any) => {
       this.movieService.getMovieFromUrl(element).subscribe((data: any) =>
       this.movies.push(data));
-      console.log(this.movies);
     });
   }
 

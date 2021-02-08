@@ -12,6 +12,7 @@ export class CharacterDetailsComponent implements OnInit {
   character: any;
   movies: any[];
   planets: any[];
+  characterId: any;
 
   constructor(
     private location: Location,
@@ -24,14 +25,14 @@ export class CharacterDetailsComponent implements OnInit {
   ngOnInit(): void {
 
     this.character = this.location.getState();
-    console.log(this.location.getState());
+    this.characterId = parseInt(this.character.url[this.character.url.length-2]);
+
     this.planetService.getPlanetFromUrl(this.character.homeworld).subscribe((data: any) =>
     this.planets.push(data));
 
     this.character.films.forEach((element: any) => {
       this.movieService.getMovieFromUrl(element).subscribe((data: any) =>
       this.movies.push(data));
-      console.log(this.movies);
     });
   }
 

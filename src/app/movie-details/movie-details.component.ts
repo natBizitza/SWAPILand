@@ -12,6 +12,7 @@ export class MovieDetailsComponent implements OnInit {
   movie: any;
   characters: any[];
   planets: any[];
+  movieId: any;
 
   constructor(
     private location: Location,
@@ -23,9 +24,9 @@ export class MovieDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    console.log(this.location.getState());
-
     this.movie = this.location.getState();
+    this.movieId = parseInt(this.movie.url[this.movie.url.length-2]);
+ 
     // get films
     if (this.movie){
         this.movie.characters.forEach((element: any) => {

@@ -1,3 +1,9 @@
 .swapi-movie-details {
     max-width: -webkit-fill-available; 
 }
+
+.movie-img-container {
+    display: flex;
+    height: fit-content;
+    align-self: center;
+}

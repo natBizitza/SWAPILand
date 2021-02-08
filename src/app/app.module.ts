@@ -28,6 +28,7 @@ import { CharacterFormComponent } from './characters/character-form/character-fo
 import { HomeComponent } from './home/home.component';
 import { PlanetFormComponent } from './planets/planet-form/planet-form.component';
 import { MovieFormComponent } from './movies/movie-form/movie-form.component';
+import {GalleriaModule} from 'primeng/galleria';
 
 
 @NgModule({
@@ -58,7 +59,8 @@ import { MovieFormComponent } from './movies/movie-form/movie-form.component';
     BrowserAnimationsModule,
     CardModule,
     DialogModule,
-    ButtonModule
+    ButtonModule,
+    GalleriaModule
   ],
   providers: [SwapiService, MoviesService, CharactersService],
   bootstrap: [AppComponent]
