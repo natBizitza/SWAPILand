@@ -1,0 +1,43 @@
+<div class="container">
+    <div [hidden]="submitted">
+        <form (ngSubmit)="onSubmit()" #movieForm="ngForm">
+            <div class='form-group'>
+                <div class="ui-fluid p-formgrid p-grid">
+                    <div class="p-field p-col-12">
+                        <label for='name'>Name</label>
+                        <input type='text' id='name' class='form-control' #name="ngModel" required [(ngModel)]='model.name' name='name'
+                        placeholder="Add name">
+                        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                            One need name :/
+                        </div>
+                    </div>
+                    <div class="p-field p-col-12 p-md-6">
+                        <label for='director'>Director</label>
+                        <input type='text' id='director' class='form-control' [(ngModel)]='model.director' name='director'
+                        placeholder="Add director">
+                    </div>
+                    <div class="p-field p-col-12 p-md-6">
+                        <label for='creator'>Producer</label>
+                        <select class='form-control' id='producer'  [(ngModel)]="model.producer" name="producer">
+                            <option *ngFor='let producer of producers' [value]='producer'>{{producer}}</option>
+                        </select>             
+                    </div>
+                    <div class="p-field p-col-12 p-md-6">
+                        <label for='releaseDate'>Release Date</label>
+                        <input type='text' id='releaseDate' class='form-control'  [(ngModel)]='model.releaseDate' name='releaseDate' placeholder="YYYY">
+                    </div>
+                    <div class="p-field p-col-12">
+                        <label for='description'>Description</label>
+                        <textarea type='text' id='description' class='form-control'  [(ngModel)]='model.description' name='description' placeholder="Add description"
+                        rows="3" cols="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success" [disabled]="!movieForm.form.valid">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div [hidden]="!submitted">
+        <h2>{{ model.name }} is created!!!</h2>
+        <button class="btn btn-primary" (click)="submitted=false;movieForm.reset()">New Movie</button>
+    </div>    
+</div>

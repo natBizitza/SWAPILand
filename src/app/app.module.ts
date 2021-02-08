@@ -26,6 +26,8 @@ import {DialogModule} from 'primeng/dialog';
 import { ButtonModule } from 'primeng/button';
 import { CharacterFormComponent } from './characters/character-form/character-form.component';
 import { HomeComponent } from './home/home.component';
+import { PlanetFormComponent } from './planets/planet-form/planet-form.component';
+import { MovieFormComponent } from './movies/movie-form/movie-form.component';
 
 
 @NgModule({
@@ -43,7 +45,9 @@ import { HomeComponent } from './home/home.component';
     PlanetSceneComponent,
     PlanetDetailsComponent,
     CharacterFormComponent,
-    HomeComponent
+    HomeComponent,
+    PlanetFormComponent,
+    MovieFormComponent
   ],
   imports: [
     BrowserModule,

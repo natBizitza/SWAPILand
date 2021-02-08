@@ -1,3 +1,33 @@
-.swapi-movie-header {
-    margin-bottom: 2rem;
+$xs: 375px;
+$s: 400px;
+$m: 570px;
+$l: 1000px;
+
+.movie-header {
+  align-items: center;
+  margin: 1.5em;
 }
+
+.btn-new-movie {
+  margin-left: 1em;
+  margin: 1em;
+}
+
+@media screen and (min-width: $xs) {
+    img {
+      height: 60vh;
+    }
+  }
+  
+  @media screen and (min-width: $m) {
+    img {
+      height: 45vh;
+    }
+  }
+  
+  @media screen and (min-width: $l) {
+    img {
+      height: 60vh;
+    }
+  }
+  

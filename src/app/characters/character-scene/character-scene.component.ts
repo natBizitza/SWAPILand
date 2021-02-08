@@ -18,11 +18,12 @@ export class CharacterSceneComponent implements OnInit {
   }
 
 
-    showDialog() {
-        this.display = true;
-    }
+  showDialog() {
+      this.display = true;
+  }
 
-    cancel() {
-    }
+  cancel() {
+    
+  }
 
 }

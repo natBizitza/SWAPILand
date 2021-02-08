@@ -8,11 +8,20 @@ import { MoviesService } from '../movies.service';
 })
 export class MoviePageComponent implements OnInit {
   movies: any;
+  display: boolean = false;
 
   constructor(public movieService: MoviesService) { }
 
   ngOnInit(): void {
     this.movieService.getMovies().subscribe((data: any) =>
     this.movies = data.results);
+  }
+
+  showDialog() {
+    this.display = true;
+  }
+
+  cancel() {
+    
   }
 }

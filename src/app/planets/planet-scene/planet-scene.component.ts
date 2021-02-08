@@ -18,10 +18,10 @@ export class PlanetSceneComponent implements OnInit {
   }
 
   showDialog() {
-    this.display = true;
-}
+      this.display = true;
+  }
 
-cancel() {
-  
-}
+  cancel() {
+    
+  }
 }
