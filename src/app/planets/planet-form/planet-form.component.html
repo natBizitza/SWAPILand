@@ -1,0 +1,45 @@
+<div class="container">
+    <div [hidden]="submitted">
+     <!--    <h1>New Planet</h1> -->
+        <form (ngSubmit)="onSubmit()" #planetForm="ngForm">
+            <div class='form-group'>
+                <div class="ui-fluid p-formgrid p-grid">
+                    <div class="p-field p-col-12">
+                        <label for='name'>Name</label>
+                        <input type='text' id='name' class='form-control' #name="ngModel" required [(ngModel)]='model.name' name='name'
+                        placeholder="Add name">
+                        <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
+                            One need name :/
+                        </div>
+                    </div>
+                    <div class="p-field p-col-12 p-md-6">
+                        <label for='terrain'>Type</label>
+                        <select class='form-control' id='terrain' [(ngModel)]="model.terrain" name="terrain">
+                        <option *ngFor='let terrain of terrainTypes' [value]='terrain'>{{terrain}}</option>
+                        </select>
+                    </div>
+                    <div class="p-field p-col-12 p-md-6">
+                        <label for='creator'>Creator</label>
+                        <select class='form-control' id='creator'  [(ngModel)]="model.creator" name="creator">
+                            <option *ngFor='let creator of creators' [value]='creator'>{{creator}}</option>
+                        </select>             
+                    </div>
+                    <div class="p-field p-col-12 p-md-6">
+                        <label for='genre'>Genrer</label>
+                        <input type='text' id='genre' class='form-control'  [(ngModel)]='model.genre' name='genre' placeholder="Add genre">
+                    </div>
+                    <div class="p-field p-col-12">
+                        <label for='races'>Race(s)</label>
+                        <textarea type='text' id='races' class='form-control'  [(ngModel)]='model.races' name='races' placeholder="Add race(s)"
+                        rows="3" cols="3"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-success" [disabled]="!planetForm.form.valid">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div [hidden]="!submitted">
+        <h2>{{ model.name }} is created!!!</h2>
+        <button class="btn btn-primary" (click)="submitted=false;planetForm.reset()">New Planet</button>
+    </div>    
+</div>

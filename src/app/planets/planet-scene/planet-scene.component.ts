@@ -8,6 +8,7 @@ import { PlanetsService } from '../planets.service';
 })
 export class PlanetSceneComponent implements OnInit {
   planets: any;
+  display: boolean = false;
 
   constructor(public planetService: PlanetsService) { }
 
@@ -15,4 +16,12 @@ export class PlanetSceneComponent implements OnInit {
     this.planetService.getPlanets().subscribe((data: any) =>
     this.planets = data.results);
   }
+
+  showDialog() {
+    this.display = true;
+}
+
+cancel() {
+  
+}
 }
