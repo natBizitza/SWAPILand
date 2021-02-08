@@ -16,7 +16,7 @@ export class CharacterFormComponent implements OnInit {
   eyeColors = ['Spicy red', 'Hot yellow', 'Sky blue', 'n/a', 'unknown', 'Fresh green'];
   genders = ['n/a', 'Male', 'Female', 'unknown'];
 
-  model = new Character (12, 'Funny genius', 100, 130, 'Shiny blond', 'Spicy red', '18 BC', 'Female');
+  model = new Character (12, '', undefined, undefined, '', '', '', '');
   submitted = false;
 
 
