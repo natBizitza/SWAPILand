@@ -6,22 +6,22 @@
                     <div class="p-field p-col-12">
                         <label for='name'>Name</label>
                         <input type='text' id='name' class='form-control' #name="ngModel" required [(ngModel)]='model.name' name='name'
-                        placeholder="Add name">
+                        placeholder="Name">
                         <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
                             One need name :/
                         </div>
                     </div>
                     <div class="p-field p-col-12 p-md-6">
                         <label for='height'>Height</label>
-                        <input type='text' id='height' class='form-control'  [(ngModel)]='model.height' name='height' placeholder="Add height">
+                        <input type='text' id='height' class='form-control'  [(ngModel)]='model.height' name='height' placeholder="Height">
                     </div>
                     <div class="p-field p-col-12 p-md-6">
                         <label for='mass'>Weight</label>
-                        <input type='text' id='mass' class='form-control'  [(ngModel)]='model.mass' name='mass' placeholder="Add weight">
+                        <input type='text' id='mass' class='form-control'  [(ngModel)]='model.mass' name='mass' placeholder="Weight">
                     </div>
                     <div class="p-field p-col-12 p-md-6">
                         <label for='hairColor'>Hair colour</label>
-                        <input type='text' id='hairColor' class='form-control'  [(ngModel)]='model.hairColor' name='hairColor' placeholder="Add hair colour">
+                        <input type='text' id='hairColor' class='form-control'  [(ngModel)]='model.hairColor' name='hairColor' placeholder="Hair colour">
                     </div>
                     <div class="p-field p-col-12 p-md-6">
                         <label for='eyeColor'>Eye colour</label>
@@ -31,7 +31,7 @@
                     </div>
                     <div class="p-field p-col-12 p-md-6">
                         <label for='birthYear'>Birth year</label>
-                        <input type='text' id='birthYear' class='form-control'  [(ngModel)]='model.birthYear' name='birthYear' placeholder="Add birth year">
+                        <input type='text' id='birthYear' class='form-control'  [(ngModel)]='model.birthYear' name='birthYear' placeholder="Birth year">
                     </div>
                     <div class="p-field p-col-12 p-md-6">
                         <label for='gender'>Gender</label>
