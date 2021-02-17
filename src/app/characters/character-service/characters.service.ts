@@ -5,7 +5,6 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CharactersService {
-
   constructor(public http: HttpClient) { }
 
   getCharacters() {

@@ -25,6 +25,7 @@ import { MovieFormComponent } from './movies/movie-form/movie-form.component';
 import {GalleriaModule} from 'primeng/galleria';
 import { CharactersService } from './characters/character-service/characters.service';
 import { MoviesService } from './movies/movie-service/movies.service';
+import { SwapiSearchComponent } from './swapi-search/swapi-search.component';
 
 
 @NgModule({
@@ -41,7 +42,8 @@ import { MoviesService } from './movies/movie-service/movies.service';
     CharacterFormComponent,
     HomeComponent,
     PlanetFormComponent,
-    MovieFormComponent
+    MovieFormComponent,
+    SwapiSearchComponent
   ],
   imports: [
     BrowserModule,

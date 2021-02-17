@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable, Subject } from 'rxjs';
-import { debounceTime, distinctUntilChanged, map, switchMap } from 'rxjs/operators';
-import { CharactersService } from '../characters/character-service/characters.service';
+import { debounceTime, distinctUntilChanged, switchMap, map, tap } from 'rxjs/operators';
+import { SwapiService } from './swapi-service/swapi.service';
 
 @Component({
   selector: 'app-swapi-search',
@@ -9,10 +9,10 @@ import { CharactersService } from '../characters/character-service/characters.se
   styleUrls: ['./swapi-search.component.scss']
 })
 export class SwapiSearchComponent implements OnInit {
-  characters$: Observable<any[]> | undefined;
+  swapis$: Observable<any[]> | undefined;
   private searchTerms = new Subject<string>();
 
-  constructor(private characterService: CharactersService) { }
+  constructor(private swapiService: SwapiService) { }
 
   // Push a search term into the observable stream.
   search(term: string): void {
@@ -20,7 +20,7 @@ export class SwapiSearchComponent implements OnInit {
   }
 
   ngOnInit(): void {
-     this.characters$ = this.searchTerms.pipe(
+     this.swapis$ = this.searchTerms.pipe(
       // wait 300ms after each keystroke before considering the term
       debounceTime(300),
 
@@ -28,10 +28,11 @@ export class SwapiSearchComponent implements OnInit {
       distinctUntilChanged(),
 
       // switch to new search observable each time the term changes
-      switchMap((term: string) => this.characterService.searchCharacters(term)),
-     // map((characters:any) =>{ this.characters$  = characters.results; console.log(characters.results)})
-
+      switchMap((term: string) => this.swapiService.searchGlobalSwapi(term)),
+      map((swapi: any) => swapi.map((swapiElem: any) => swapiElem.results ))
+     // map((characters:any) =>{characters.results; console.log(characters.results)}
     );
+
   }
 
 }
