@@ -19,7 +19,6 @@ export class SwapiService {
       // if not search term, return empty char array.
       return of([]);
     }
-    //return this.http.get<any[]>(`https://swapi.dev/api/people/?search=${term}`)
     return forkJoin([people, movies, planets]).pipe(
       tap(x => x.length ?
          console.log(`found characters matching "${term}"`) :
