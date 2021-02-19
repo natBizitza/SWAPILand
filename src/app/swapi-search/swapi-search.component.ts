@@ -29,7 +29,7 @@ export class SwapiSearchComponent implements OnInit {
 
       // switch to new search observable each time the term changes
       switchMap((term: string) => this.swapiService.searchGlobalSwapi(term)),
-      map((swapi: any) => swapi.map((swapiElem: any) => swapiElem.results ))
+      map((swapi: any) => swapi.map((swapiElem: any) => swapiElem.results[0] ))
     );
 
   }
