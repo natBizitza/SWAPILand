@@ -21,9 +21,9 @@ export class SwapiService {
     }
     return forkJoin([people, movies, planets]).pipe(
       tap(x => x.length ?
-         console.log(`found characters matching "${term}"`) :
-         console.log(`no characters matching "${term}"`)),
-      catchError(this.handleError<any[]>('searchCharacters', []))
+         console.log(`found swapis matching "${term}"`) :
+         console.log(`no swapis matching "${term}"`)),
+      catchError(this.handleError<any[]>('searchSwapis', []))
     );
   }
 
