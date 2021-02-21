@@ -2,7 +2,6 @@
     <input #searchBox id="search-box" (input)="search(searchBox.value)" autocomplete="off"/>
     <ul class="search-result">
       <li *ngFor="let swapi of swapis$ | async" >
-      <!--   <span>{{ swapi | json }}</span> -->
         <a [routerLink]="['character-details']" [state]='swapi'>
           {{swapi.name? swapi?.name: swapi?.title}}
         </a>
