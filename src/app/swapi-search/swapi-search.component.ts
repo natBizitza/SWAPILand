@@ -8,6 +8,7 @@ import { SwapiService } from './swapi-service/swapi.service';
   templateUrl: './swapi-search.component.html',
   styleUrls: ['./swapi-search.component.scss']
 })
+
 export class SwapiSearchComponent implements OnInit {
   swapis$: Observable<any[]> | undefined;
   private searchTerms = new Subject<string>();
@@ -29,9 +30,8 @@ export class SwapiSearchComponent implements OnInit {
 
       // switch to new search observable each time the term changes
       switchMap((term: string) => this.swapiService.searchGlobalSwapi(term)),
-      map((swapi: any) => swapi.map((swapiElem: any) => swapiElem.results[0] ))
+      map((swp: any) => swp.filter((swpFilter: any) => swpFilter.results[0] !== undefined).map((swpElem: any) => swpElem.results[0]))
     );
-
   }
 
 }
