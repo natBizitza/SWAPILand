@@ -3,7 +3,7 @@
     <ul class="search-result">
       <li *ngFor="let swapi of swapis$ | async" >
      <!--      <span>{{ swapi | json }}</span> -->
-        <a [routerLink]="['character-details']" [state]='swapi'>
+        <a [routerLink]="[swapi.gender?'characters/character-details':swapi.title?'movies/movie-details':'planets/planet-details']" [state]='swapi'>
           {{swapi.name || swapi.title}}
         </a>
       </li>

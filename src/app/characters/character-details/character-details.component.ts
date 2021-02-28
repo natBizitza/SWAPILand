@@ -25,7 +25,8 @@ export class CharacterDetailsComponent implements OnInit {
   ngOnInit(): void {
 
     this.character = this.location.getState();
-    this.characterId = parseInt(this.character.url[this.character.url.length-2]);
+    console.log(this.location.getState());
+    this.characterId = parseInt((this.character.url[this.character.url.length - 2]), 10);
 
     this.planetService.getPlanetFromUrl(this.character.homeworld).subscribe((data: any) =>
     this.planets.push(data));
